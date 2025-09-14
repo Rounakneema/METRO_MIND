@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>📄 Document Alert</h2>
+
+<div class="alert alert-{{ alert_type }}">
+    <h3>{{ document_title }}</h3>
+    <p><strong>Category:</strong> {{ category }}</p>
+    <p><strong>Priority:</strong> {{ priority }}</p>
+    <p><strong>Uploaded by:</strong> {{ uploaded_by }}</p>
+    <p><strong>Date:</strong> {{ upload_date }}</p>
+</div>
+
+<h4>Document Summary:</h4>
+<p>{{ summary }}</p>
+
+{% if action_required %}
+<div class="alert alert-warning">
+    <h4>⚠️ Action Required</h4>
+    <p>{{ action_message }}</p>
+</div>
+{% endif %}
+
+<p style="text-align: center; margin: 20px 0;">
+    <a href="{{ document_url }}" class="btn">View Document</a>
+</p>
+{% endblock %}

@@ -1,0 +1,38 @@
+{
+  "sentence_transformer": {
+    "name": "sentence_transformer",
+    "model_id": "all-MiniLM-L6-v2",
+    "model_type": "sentence_transformer",
+    "status": "not_downloaded",
+    "local_path": "models\\sentence_transformer",
+    "file_size": 0,
+    "checksum": null
+  },
+  "sentiment_analyzer": {
+    "name": "sentiment_analyzer",
+    "model_id": "cardiffnlp/twitter-roberta-base-sentiment-latest",
+    "model_type": "transformers_model",
+    "status": "not_downloaded",
+    "local_path": "models\\sentiment_analyzer",
+    "file_size": 0,
+    "checksum": null
+  },
+  "summarizer": {
+    "name": "summarizer",
+    "model_id": "facebook/bart-large-cnn",
+    "model_type": "transformers_model",
+    "status": "not_downloaded",
+    "local_path": "models\\summarizer",
+    "file_size": 0,
+    "checksum": null
+  },
+  "multilingual_embeddings": {
+    "name": "multilingual_embeddings",
+    "model_id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "model_type": "sentence_transformer",
+    "status": "not_downloaded",
+    "local_path": "models\\multilingual_embeddings",
+    "file_size": 0,
+    "checksum": null
+  }
+}

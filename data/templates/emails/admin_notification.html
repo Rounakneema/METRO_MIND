@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>{{ subject }}</h2>
+
+<div class="alert alert-info">
+    <p>{{ message }}</p>
+</div>
+
+{% if action_required %}
+<h4>Action Required:</h4>
+<ul>
+    {% for action in actions %}
+    <li>{{ action }}</li>
+    {% endfor %}
+</ul>
+
+<p style="text-align: center; margin: 20px 0;">
+    <a href="{{ admin_url }}" class="btn">Go to Admin Panel</a>
+</p>
+{% endif %}
+{% endblock %}

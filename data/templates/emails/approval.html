@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Account Status Update</h2>
+
+{% if approved %}
+    <div class="alert alert-success">
+        <h3>🎉 Account Approved!</h3>
+        <p>Dear {{ first_name }},</p>
+        <p>Your MetroMind account has been approved! You can now access the system with full privileges.</p>
+        
+        <h4>Next Steps:</h4>
+        <ul>
+            <li>Log in to the system using your username and password</li>
+            <li>Complete your profile information</li>
+            <li>Start managing your documents efficiently</li>
+        </ul>
+        
+        <p style="text-align: center; margin: 20px 0;">
+            <a href="{{ system_url }}" class="btn">Access MetroMind</a>
+        </p>
+    </div>
+{% else %}
+    <div class="alert alert-warning">
+        <h3>Account Registration Update</h3>
+        <p>Dear {{ first_name }},</p>
+        <p>We regret to inform you that your MetroMind account registration could not be approved at this time.</p>
+        
+        {% if notes %}
+        <h4>Additional Information:</h4>
+        <p><em>{{ notes }}</em></p>
+        {% endif %}
+        
+        <p>If you have any questions or would like to reapply, please contact your system administrator.</p>
+    </div>
+{% endif %}
+
+<p>If you have any questions, please contact the MetroMind support team.</p>
+{% endblock %}
